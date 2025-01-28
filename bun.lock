@@ -1,11 +1,11 @@
 {
-  "lockfileVersion": 0,
+  "lockfileVersion": 1,
   "workspaces": {
     "": {
       "name": "contributors-table",
       "dependencies": {
         "@octokit/rest": "^21.1.0",
-        "contributors-table": "^1.2.0",
+        "contributors-table": "^1.2.1",
       },
       "devDependencies": {
         "@biomejs/biome": "^1.9.4",
@@ -218,7 +218,7 @@
 
     "consola": ["consola@3.3.3", "", {}, "sha512-Qil5KwghMzlqd51UXM0b6fyaGHtOC22scxrwrz4A2882LyUMwQjnvaedN1HAeXzphspQ6CpHkzMAWxBTUruDLg=="],
 
-    "contributors-table": ["contributors-table@1.2.0", "", { "dependencies": { "sharp": "^0.33.5", "svgo": "^3.3.2" } }, "sha512-X5xTyaPrqbuPq0xsfSW3RRenntgtcKOVz2mZnkrMsnrprmC0P7N6h/ncIqtGplVwVs+r0SChNlvWBpkZgGaAZw=="],
+    "contributors-table": ["contributors-table@1.2.1", "", { "dependencies": { "sharp": "^0.33.5", "svgo": "^3.3.2" } }, "sha512-0MsrLiySIqW79YnKWLZ/hB1B7cOZcQZ93y5FnsOj3RjtRK/QEp6W+EK6habs5Gi5fC6ZG5v44fLKrHxOCVVPzQ=="],
 
     "convert-hrtime": ["convert-hrtime@3.0.0", "", {}, "sha512-7V+KqSvMiHp8yWDuwfww06XleMWVVB9b9tURBx+G7UTADuo5hYPuowKloz4OzOqbPezxgo+fdQ1522WzPG4OeA=="],
 
