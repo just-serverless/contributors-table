@@ -33,7 +33,9 @@ export async function getContributorsListFromGitHub(
 		auth: {
 			appId: process.env.GITHUB_APP_ID,
 			installationId: process.env.GITHUB_APP_INSTALLATION_ID,
-			privateKey: process.env.GITHUB_APP_PRIVATE_KEY,
+			privateKey:
+				// https://stackoverflow.com/a/74668003/21165921
+				process.env.GITHUB_APP_PRIVATE_KEY.split(String.raw`\n`).join('\n'),
 		},
 		userAgent: USER_AGENT,
 	})
