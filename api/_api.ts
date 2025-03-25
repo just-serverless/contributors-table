@@ -1,9 +1,10 @@
 import { Octokit } from '@octokit/rest'
+import { createAppAuth } from '@octokit/auth-app'
 import { USER_AGENT } from '../config.js'
 import type { Contributor } from './_types.js'
 
 /**
- * Fetches the list of contributors from a GitHub repository.
+ * Fetches the list of contributors from a GitHub repository using GitHub App authentication.
  *
  * @param repo - The repository path in the format "owner/repo"
  * @param max - Maximum number of contributors to fetch (default: `100`)
@@ -28,9 +29,15 @@ export async function getContributorsListFromGitHub(
 	max = 100,
 ): Promise<Contributor[]> {
 	const octokit = new Octokit({
-		auth: process.env.GITHUB_APP_TOKEN,
+		authStrategy: createAppAuth,
+		auth: {
+			appId: process.env.GITHUB_APP_ID,
+			installationId: process.env.GITHUB_APP_INSTALLATION_ID,
+			privateKey: process.env.GITHUB_APP_PRIVATE_KEY,
+		},
 		userAgent: USER_AGENT,
 	})
+
 	const [owner, repoName] = repo.split('/')
 	const allContributors: Contributor[] = []
 	const perPage = 100
@@ -50,7 +57,6 @@ export async function getContributorsListFromGitHub(
 			break
 		}
 
-		// AI generated
 		const remainingToDownload = needToDownload - downloaded
 		const contributorsToAdd = contributors.slice(0, remainingToDownload)
 		// @ts-ignore

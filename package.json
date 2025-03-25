@@ -6,6 +6,7 @@
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"dependencies": {
+		"@octokit/auth-app": "^7.1.5",
 		"@octokit/rest": "^21.1.0",
 		"contributors-table": "^1.2.1"
 	},
