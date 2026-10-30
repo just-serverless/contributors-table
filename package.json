@@ -13,7 +13,7 @@
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4",
 		"@octokit/types": "^13.7.0",
-		"@vercel/functions": "^1.5.2",
+		"@vercel/functions": "^3.0.0",
 		"@vercel/node": "^5.0.2"
 	}
 }
