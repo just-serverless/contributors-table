@@ -11,7 +11,7 @@
 		"contributors-table": "^1.2.1"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "^1.9.4",
+		"@biomejs/biome": "^2.0.0",
 		"@octokit/types": "^13.7.0",
 		"@vercel/functions": "^1.5.2",
 		"@vercel/node": "^5.0.2"
